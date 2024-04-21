@@ -21,6 +21,9 @@ let handleUserLogin = (email, password) => {
                     //compare password
                     let check = await bcrypt.compareSync(password, user.password); // false
 
+                    // Cách 2: dùng synchronous  (đồng bộ)
+                    // let check = bcrypt.compareSync(password, user.password);
+
                     // let check = true;
                     if (check) {
                         userData.errCode = 0;
