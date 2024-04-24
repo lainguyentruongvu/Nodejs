@@ -15,7 +15,10 @@ let initWebRoutes = (app) => {
     router.get('/delete-crud', homeController.deleteCRUD);
 
     router.post('/api/login', userContronller.handleLogin);
-    router.get('/api/get-all-users', userContronller.handleGetAllUser);
+    router.get('/api/get-all-userss', userContronller.handleGetAllUser);
+    router.post('/api/create-new-userss', userContronller.handleCreaeteNewUser);
+    router.put('/api/edit-user', userContronller.handleEditUser);
+    router.delete('/api/delete-user', userContronller.handleDeleteUser)
     //rest api
     return app.use("/", router);
 }
